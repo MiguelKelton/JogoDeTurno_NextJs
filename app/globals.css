@@ -1,0 +1,175 @@
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html,
+CSS
+
+
+body {
+    background-color: #212529;
+    color: #f8f9fa;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+}
+
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+game-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 4px solid #495057;
+    background-color: #343a40;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.game-title {
+    color: #fcc419;
+    text-shadow: 2px 2px #e03131;
+    font-size: 2.5rem;
+}
+
+/* Campo de Batalha */
+.battlefield {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 30px 0;
+}
+
+.player-card {
+    width: 300px;
+    padding: 15px;
+    background-color: #495057;
+    border: 2px solid #868e96;
+}
+
+.player-card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.player-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 4px solid #212529;
+    margin-bottom: 15px;
+    background-color: #868e96;
+}
+
+/* Barras de Vida */
+.health-bar-container {
+    width: 100%;
+    height: 25px;
+    background-color: #212529;
+    border: 2px solid #868e96;
+    margin-bottom: 10px;
+}
+
+.health-bar {
+    height: 100%;
+    background-color: #40c057; /* Verde para vida */
+    transition: width 0.5s ease-in-out; /* Animação suave da vida */
+}
+
+/* Indicador de Turno */
+.turn-indicator {
+    align-self: center;
+    font-size: 1.5rem;
+    color: #fcc419;
+}
+
+
+/* Painel de Ações */
+.actions-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.actions-panel button {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+    padding: 15px;
+    cursor: pointer;
+    border: 2px solid #868e96;
+    background-color: #495057;
+    color: #f8f9fa;
+    transition: background-color 0.2s;
+}
+
+.actions-panel button:hover:not(:disabled) {
+    background-color: #868e96;
+}
+
+.actions-panel button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Log de Batalha */
+.log-container {
+    margin-top: 30px;
+    padding: 15px;
+    height: 150px;
+    background-color: #212529;
+    border: 2px solid #495057;
+    overflow-y: scroll;
+    text-align: left;
+}
+
+.log-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.log-list li {
+    padding: 5px;
+    border-bottom: 1px dashed #495057;
+    font-size: 0.8rem;
+}
+
+/* Banner de Vencedor */
+.vencedor-banner {
+    padding: 20px;
+    background-color: #fcc419;
+    color: #212529;
+    border: 4px solid #e03131;
+    margin: 20px 0;
+}
